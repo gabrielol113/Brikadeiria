@@ -1,0 +1,99 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(189,223,222);
+    line-height: 40px;
+    text-align: center;
+
+}
+
+header img {
+    width: 40px;
+}
+
+header a {
+    display: inline-flex;
+    height: 100%;
+    text-decoration: none;
+    line-height: 26px;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 26px;
+    
+}
+
+/* Aqui vai ficar os bombons */
+
+#Page {
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 100%;
+}
+#Corpo {
+	display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: 200px;
+    grid-column-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    float: left;
+    clear: both;
+    width: 75%;
+    height: 100%;
+    background-color: rgb(26, 107, 104);
+}
+
+#CandyBox {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid grey;
+    min-width: 70px;
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#CandyBox img {
+    width: 200px;
+    height: 200px;
+}
+
+#qButtons {
+    float: left;
+    background-color: grey;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+#Titulo {
+    border-bottom: 1px solid grey;
+    background-color: grey;
+}
+
+/* Barra lateral direita que vai ficar pros pedidos */
+
+#LateralDireito {
+    width: 25%px;
+    height: 100%;
+    background-color: rgb(26, 107, 104);
+}
+
+
+
+/* Trabalhando o footer */
+#footer {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 26px;
+    text-align: center;
+    background-color: rgb(26, 107, 104);
+    width: 100%;
+    height: 100px;
+}
+
