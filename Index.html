@@ -9,13 +9,13 @@
     <link rel="stylesheet" type="text/css" href="Estilos/stylesheets.css">
     <title>Brikadeiria</title>
 </head>
-<body>
+<body onload="exibeCarrinho()">
     <header><img src="Galeria/Icone.png"><a href="">Brikadeiria</a>
     </header>
     <div id="Page">
         <div id="Corpo">
                 <!-- Casadinho == 1
-                     Pudim ==2
+                     Pudim == 2
                      Brigadeiro Tradicional == 3
                      Red velvet == 4
                      Palha italiana == 5
@@ -88,7 +88,7 @@
                 <div id="qButtons">
                     <button id="minusButton" onclick="tiraBombon(7)">-</button>
                     <div id="middleButton">Quantidade</div>
-                    <button id="plusButton" onclick="adicionaBombon(77)">+</button>
+                    <button id="plusButton" onclick="adicionaBombon(7)">+</button>
                 </div>
             </div>
             <div id="CandyBox">
@@ -152,8 +152,10 @@
                 <input type="text" placeholder="Insira seu nome" id="nome" ><br><br>
                 <label for="fname">Endereço:</label>
                 <input type="text" placeholder="Insira aqui seu endereço"><br>
-                <button type="button" value="Enviar" id="send">Enviar</button>
+                <button type="button" value="Enviar" id="send" onclick="">Enviar</button>
             </form>
+            <h6 style="font-size: 16px;">Carrinho</h4>
+            <p id="carro"> </p>
         </div>
     </div>
 

@@ -111,22 +111,33 @@ header a {
 
 /* Barra lateral direita que vai ficar pros pedidos */
 
-#LateralDireito {
+
+#formulário {
     font-family: "Walkway Bold", arial;
-    align-content: right;    
+    font-size: 15px;
+}
+
+#LateralDireito {
+    font-family: "Walkway Bold", arial;   
     font-size: 36px;
     text-align: center;
-    border: 1px solid red;
     width: 25%;
-
+    height: 600px;
     background-color: grey;
 }
 
-
+#carro{
+    border: 1px solid black;
+    background-color: grey;
+    font-size: 12px;
+    width: 100%;
+    min-height: 100%;
+    height: 300px;
+    margin: 5px;
+}
 
 /* Trabalhando o footer */
 #footer {
-    border: 1px solid red;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 12px;
     text-align: center;
@@ -136,6 +147,7 @@ header a {
 }
 
 #footer h4 {
+    line-height: 30px;
     font-size: 30px;
     margin-top: 10px;
 }
@@ -145,8 +157,4 @@ header a {
     width: 30px;
 }
 
-#formulário {
-    font-family: "Walkway Bold", arial;
-    font-size: 15px;
-}
 
