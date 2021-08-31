@@ -32,22 +32,22 @@ function adicionaBombon(pedido){
     else{
         bombom[pedido]--;
         carro[pedido] = carro[pedido] + 1;
-        console.log("Carrinho" + carro[pedido]);
-        console.log("Estoque" + bombom[pedido]);
         exibeCarrinho();
        // alert("Pedido adicionado ao carrinho!");
     }
+    console.log(carro[pedido]);
 }
 
 function tiraBombon(pedido){
-     if(carro[pedido] < 1){
+    if(carro[pedido] < 1){
          alert("Não existe o bombom " + nameBombom[pedido] + " no carrinho" );
-         
-     }
+    }
+    else{
         bombom[pedido]++;
         carro[pedido] = carro[pedido] - 1;
       //  alert("Produto retirado do carrinho!");
         exibeCarrinho();
+    }
 }
 
 function exibeCarrinho(){
@@ -66,6 +66,10 @@ paragrafo.innerHTML = " ";
  
         
     }
+}
+
+function exibeQuantidade(){
+
 }
 
 function enviaForm(){
