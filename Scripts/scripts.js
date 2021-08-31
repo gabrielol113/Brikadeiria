@@ -21,7 +21,7 @@ var nameBombom = [" ","Casadinho","Pudim",
                   "Morango","Opereta","Pimenta",
                   "Caramelho","Quindim","Maracujá"];
 var carro = [0,0,0,0,0,0,0,0,0,0,0,0,0];
-var i;
+var i,o;
 
 
 function adicionaBombon(pedido){
@@ -68,7 +68,14 @@ paragrafo.innerHTML = " ";
     }
 }
 
-function exibeQuantidade(){
+function exibeQuantidade(o){
+    console.log("Bombom:" + o);
+    let quantidade = document.querySelector('#middleButton');
+        quantidade.innerHTML= " ";
+        quantidade.innerHTML = quantidade.innerHTML + carro[o];
+        if(quantidade.innerHTML == 0){
+            quantidade.innerHTML="Quantidade";
+        }
 
 }
 
