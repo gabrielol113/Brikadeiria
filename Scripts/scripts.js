@@ -22,6 +22,8 @@ var nameBombom = [" ","Casadinho","Pudim",
                   "Caramelho","Quindim","Maracujá"];
 var carro = [0,0,0,0,0,0,0,0,0,0,0,0,0];
 var i,o;
+let quantidade;
+let paragrafo;
 
 
 function adicionaBombon(pedido){
@@ -53,7 +55,7 @@ function tiraBombon(pedido){
 function exibeCarrinho(){
 
 var j = bombom.length;
-let paragrafo = document.querySelector('#carro');
+paragrafo = document.querySelector('#carro');
 paragrafo.innerHTML = " ";
     for( i = 1; i < j - 1; i++){
 
@@ -69,8 +71,8 @@ paragrafo.innerHTML = " ";
 }
 
 function exibeQuantidade(o){
-    console.log("Bombom:" + o);
-    let quantidade = document.querySelector('#middleButton');
+
+        quantidade = document.querySelectorAll('#middleButton')[o-1];
         quantidade.innerHTML= " ";
         quantidade.innerHTML = quantidade.innerHTML + carro[o];
         if(quantidade.innerHTML == 0){
@@ -91,3 +93,16 @@ function mostrarValor() {
     alert(document.getElementById("nome").value);
 }
 
+//https://wa.me/númerodetelefonenowhatsapp?text=urldamensagempronta
+
+function enviaMensagem(){
+    let name, address, link;
+
+    name=document.getElementById("nome").value;
+    address=document.getElementById("address").value;
+    console.log(name);
+    console.log(address);
+    //console.log("https://wa.me/númerodetelefonenowhatsapp?text=" + "Cliente: " + name + "%A0" + "Endereço: " + address + "%A0%A0%A0" + quantidade.innerHTML);
+    link="https://wa.me/númerodetelefonenowhatsapp?text="+"Cliente: "+name.toString()+"%0A"+"Endereço: "+address.toString()+"%0A%0A%0A" + paragrafo.innerHTML;
+    window.open(link);
+}

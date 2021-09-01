@@ -129,17 +129,43 @@ header a {
     font-size: 15px;
 }
 
+#nome {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#address {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#send {
+    width: 60px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#send:hover {
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
 #LateralDireito {
     font-family: "Walkway Bold", arial;   
     font-size: 36px;
     text-align: center;
     width: 25%;
-    background-color: grey;
+    background-color: rgb(189,223,230);
 }
 
 #carro{
     border: 1px solid black;
-    background-color: grey;
+    background-color: white;
     font-size: 12px;
     height: 300px;
     margin: 5px;
@@ -167,30 +193,6 @@ header a {
     width: 30px;
 }
 
-#nome {
-    border: 1px solid black;
-    border-radius: 3px;
-}
 
-#address {
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
-#send {
-    width: 60px;
-    height: 25px;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
-#send:hover {
-    background-color: black;
-    color: white;
-    width: 60px;
-    height: 25px;
-    border: 1px solid black;
-    border-radius: 3px;
-}
 
 
