@@ -20,7 +20,11 @@ var nameBombom = [" ","Casadinho","Pudim",
                   "Torta de limão","Dark",
                   "Morango","Opereta","Pimenta",
                   "Caramelho","Quindim","Maracujá"];
+
+// Declaraçãp dp carrinho
 var carro = [0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+//Declaração de váriaveis que hão de ser úteis no processo
 var i,o;
 let quantidade;
 let paragrafo;
@@ -93,7 +97,6 @@ function mostrarValor() {
     alert(document.getElementById("nome").value);
 }
 
-//https://wa.me/númerodetelefonenowhatsapp?text=urldamensagempronta
 
 function enviaMensagem(){
     let name, address, link;
@@ -102,7 +105,10 @@ function enviaMensagem(){
     address=document.getElementById("address").value;
     console.log(name);
     console.log(address);
+    console.log(paragrafo.innerHTML);
+
+    paragrafo.innerHTML.replace(/<br>/g, "%0A");
     //console.log("https://wa.me/númerodetelefonenowhatsapp?text=" + "Cliente: " + name + "%A0" + "Endereço: " + address + "%A0%A0%A0" + quantidade.innerHTML);
-    link="https://wa.me/númerodetelefonenowhatsapp?text="+"Cliente: "+name.toString()+"%0A"+"Endereço: "+address.toString()+"%0A%0A%0A" + paragrafo.innerHTML;
+    link="https://wa.me/+5527995900559?text="+"Cliente: "+name.toString()+ "%0A" + "Endereço: " +address.toString()+ "%0A" + paragrafo.innerHTML.replace(/<br>/g, "%0A");
     window.open(link);
 }
