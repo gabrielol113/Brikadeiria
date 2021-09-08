@@ -1,5 +1,5 @@
 /*Declaração de estoque */
-
+var menuOpen = false;
 var bombom = [0,
             /*casadinho = */50,
             /*pudim = */50,
@@ -20,12 +20,12 @@ var nameBombom = [" ","Casadinho","Pudim",
                   "Torta de limão","Dark",
                   "Morango","Opereta","Pimenta",
                   "Caramelho","Quindim","Maracujá"];
-
+let url="https://api.adviceslip.com/advice";
 // Declaraçãp dp carrinho
 var carro = [0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 //Declaração de váriaveis que hão de ser úteis no processo
-var i,o;
+var i,o,t;
 let quantidade;
 let paragrafo;
 
@@ -38,7 +38,8 @@ function adicionaBombon(pedido){
     else{
         bombom[pedido]--;
         carro[pedido] = carro[pedido] + 1;
-        exibeCarrinho();
+        exibeCarrinho1();
+        exibeCarrinho2();
        // alert("Pedido adicionado ao carrinho!");
     }
     console.log(carro[pedido]);
@@ -52,14 +53,15 @@ function tiraBombon(pedido){
         bombom[pedido]++;
         carro[pedido] = carro[pedido] - 1;
       //  alert("Produto retirado do carrinho!");
-        exibeCarrinho();
+        exibeCarrinho1();
+        exibeCarrinho2();
     }
 }
 
-function exibeCarrinho(){
+function exibeCarrinho1(){
 
 var j = bombom.length;
-paragrafo = document.querySelector('#carro');
+paragrafo = document.querySelectorAll('#carro')[0];
 paragrafo.innerHTML = " ";
     for( i = 1; i < j - 1; i++){
 
@@ -112,3 +114,38 @@ function enviaMensagem(){
     link="https://wa.me/+5527995900559?text="+"Cliente: "+name.toString()+ "%0A" + "Endereço: " +address.toString()+ "%0A" + paragrafo.innerHTML.replace(/<br>/g, "%0A");
     window.open(link);
 }
+
+function exibeCarrinho2(){
+
+    var j = bombom.length;
+    paragrafo = document.querySelectorAll('#carro')[1];
+    paragrafo.innerHTML = " ";
+        for( i = 1; i < j - 1; i++){
+    
+               if(carro[i] != 0 && carro[i] > 0){
+                    paragrafo.innerHTML = paragrafo.innerHTML + nameBombom[i]+ ": " + carro[i] + '<br>';
+                }
+                else{
+    
+                }
+     
+            
+        }
+    }
+
+function abreCarrinho(){
+    exibeCarrinho2();
+    if(menuOpen == false){
+        menuOpen = true;
+        document.getElementById("imgMenu1").id = "imgMenu2";
+        document.getElementById("navCelBar").style.bottom = "466px";
+
+    }
+    else{
+        menuOpen = false;
+        document.getElementById("imgMenu2").id = "imgMenu1";
+        document.getElementById("navCelBar").style.bottom = "0px";
+
+    }
+}
+
